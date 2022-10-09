@@ -8,7 +8,7 @@ import sc from './Dropdown.module.scss';
 import './dropdownAnimation.scss';
 
 function Dropdown({ label, allOption, multiSelect,
-    initialSelectedOptions = [],
+    selectedOptions = [],
     initialOptions = [],
     style = {},
 }) {
@@ -22,7 +22,7 @@ function Dropdown({ label, allOption, multiSelect,
 
     //set options and selected options
     const [options, setOptions] = useState(initialOptions);
-    const [selection, setSelection] = useState(initialSelectedOptions);
+    const [selection, setSelection] = useState(selectedOptions);
     var allOptions = useRef(initialOptions);
 
 

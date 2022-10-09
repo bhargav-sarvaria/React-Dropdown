@@ -8,7 +8,7 @@ function App() {
       <Dropdown
         label={'Colors'}
         allOption={true}
-        initialSelectedOptions={['Blue']}
+        selectedOptions={['Blue']}
         multiSelect={true}
         initialOptions={['White', 'Red', 'Blue', 'Brown', 'Black']} />
     </div>
