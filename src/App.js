@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Dropdown from './lib/components/Dropdown/Dropdown'
+import { CSSTransition } from 'react-transition-group';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Dropdown
+        label={'Animals'}
+        allOption={true}
+        initialSelectedOptions={['Dog']}
+        multiSelect={true}
+        initialOptions={['Cat', 'Dog', 'Lion', 'Wolf', 'Zeebra']} />
+
+      <Dropdown
+        label={'Colors'}
+        allOption={true}
+        initialSelectedOptions={['Blue']}
+        multiSelect={true}
+        initialOptions={['White', 'Red', 'Blue', 'Brown', 'Black']} />
+
     </div>
   );
 }

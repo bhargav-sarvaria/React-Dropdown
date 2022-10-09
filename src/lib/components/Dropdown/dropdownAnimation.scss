@@ -1,0 +1,86 @@
+.roll {
+  &-enter {
+    transform: rotate(0deg);
+    transition: transform 200ms;
+  }
+  &-exit-done {
+    transform: rotate(180deg);
+    transition: transform 200ms;
+  }
+}
+
+.dlist {
+  &-appear {
+    opacity: 0;
+    max-height: 0;
+  }
+  &-enter {
+    opacity: 0;
+    max-height: 0;
+  }
+  &-enter-done {
+    opacity: 1;
+    max-height: 277px;
+    animation: fade-in 600ms;
+    transition: max-height 600ms ease;
+  }
+  &-exit {
+    opacity: 1;
+    max-height: 277px;
+  }
+  &-exit-active {
+    opacity: 0;
+    max-height: 0;
+    animation: fade-out 300ms;
+    transition: max-height 300ms ease;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.dcontainer {
+  &-appear {
+    margin-top: 0;
+    z-index: 20;
+  }
+  &-enter {
+    margin-top: 0;
+    z-index: 20;
+  }
+  &-enter-done {
+    z-index: 25;
+    margin-top: -15px;
+    transition: all 300ms ease;
+  }
+  &-exit {
+    z-index: 25;
+    margin-top: -15px;
+  }
+  &-exit-active {
+    margin-top: 0;
+    z-index: 20;
+    transition: all 300ms ease;
+  }
+}
